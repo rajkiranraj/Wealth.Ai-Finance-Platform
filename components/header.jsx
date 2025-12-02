@@ -7,6 +7,7 @@ const Header = () => {
   return (
     <div className='fixed top-0'>
       <nav>
+        <header>This is header</header>
         <Link href="/">
         <Image src={"/logo.png"} alt='welthIQ.ai logo' height={60} width={150} className='h-6 w-auto object-contain'></Image>
         </Link>

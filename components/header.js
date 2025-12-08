@@ -19,7 +19,7 @@ const Header = () => {
             alt="Welth Logo"
             width={200}
             height={60}
-            className="h-12 w-auto object-contain"
+            className="h-20 sm:h-30 md:h-20 lg:h-20 w-auto object-contain"
           />
         </Link>
 

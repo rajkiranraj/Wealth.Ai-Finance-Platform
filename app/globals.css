@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -119,4 +117,32 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* custom css by dev */
+
+@layer utilities {
+  .gradient {
+    @apply bg-gradient-to-br from-blue-600 to-purple-600;
+  }
+
+  .gradient-title {
+    @apply font-extrabold tracking-tighter pr-2 pb-2 text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-purple-600;
+  }
+}
+
+.hero-image-wrapper{
+  perspective: 1000px;
+}
+.hero-image{
+  transform: rotateX(15deg) scale(1);
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+}
+.hero-image.scrolled{
+  transform: rotateX(0deg) scale(1) translateY(40px);
+}
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }

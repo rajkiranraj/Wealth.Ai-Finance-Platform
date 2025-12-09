@@ -8,7 +8,6 @@ export const metadata = {
   title: "WealthIQ.ai",
   description: "One stop solution for all ur financial management powered by Ai",
 };
-
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>

@@ -6,6 +6,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "randomuser.me",
       },
+      {
+        protocol: "https",
+        hostname: "img.freepik.com",
+      },
+      {
+        protocol: "https",
+        hostname: "plus.unsplash.com",
+      },
     ],
   },
 };

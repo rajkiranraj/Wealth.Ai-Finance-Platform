@@ -88,23 +88,26 @@ export const howItWorksData = [
 // Testimonials Data
 export const testimonialsData = [
   {
-    name: "Sarah Johnson",
+    name: "Priyanka sharma",
     role: "Small Business Owner",
-    image: "https://randomuser.me/api/portraits/women/75.jpg",
+    image:
+      "https://img.freepik.com/free-photo/woman-doing-close-up-photoshoot-studio_53876-14476.jpg?semt=ais_hybrid&w=740&q=80",
     quote:
       "WelthIQ has transformed how I manage my business finances. The AI insights have helped me identify cost-saving opportunities I never knew existed.",
   },
   {
-    name: "Michael Chen",
+    name: "Vishal",
     role: "Freelancer",
-    image: "https://randomuser.me/api/portraits/men/75.jpg",
+    image:
+      "https://plus.unsplash.com/premium_photo-1682089787056-9ac0c78a2ac2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5kaWFuJTIwcGVvcGxlfGVufDB8fDB8fHww",
     quote:
       "The receipt scanning feature saves me hours each month. Now I can focus on my work instead of manual data entry and expense tracking.",
   },
   {
-    name: "Emily Rodriguez",
+    name: "Krithika",
     role: "Financial Advisor",
-    image: "https://randomuser.me/api/portraits/women/74.jpg",
+    image:
+      "https://img.freepik.com/free-photo/indian-woman-posing-cute-stylish-outfit-camera-smiling_482257-122351.jpg?semt=ais_hybrid&w=740&q=80",
     quote:
       "I recommend WelthIQ to all my clients. The multi-currency support and detailed analytics make it perfect for international investors.",
   },

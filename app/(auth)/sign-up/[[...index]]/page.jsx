@@ -1,4 +1,4 @@
-import { SignIn, SignUp } from '@clerk/nextjs';
+import { SignUp } from '@clerk/nextjs';
 import { memo } from 'react';
 
 const Page = () => {

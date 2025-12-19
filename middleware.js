@@ -9,7 +9,9 @@ import { clerkMiddleware } from "@clerk/nextjs/server";
 
 // Clerk setup
 const clerk = clerkMiddleware({
-  publicRoutes: ["/sign-in", "/sign-up", "/"],
+  // Clerk uses nested routes like /sign-in/sso-callback.
+  // These must be public or the auth flow can break and end up on 404.
+  publicRoutes: ["/", "/sign-in(.*)", "/sign-up(.*)"],
 });
 
 const arcjetKey = process.env.ARCJET_KEY;

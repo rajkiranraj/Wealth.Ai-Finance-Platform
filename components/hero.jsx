@@ -36,7 +36,7 @@ const HeroSection = () => {
           showBorder={false}
           className="
             block text-center font-semibold tracking-tight
-            text-6xl sm:text-7xl md:text-8xl lg:text-9xl
+            text-6xl sm:text-7xl md:text-8xl lg:text-8xl
             leading-[1.02] will-change-transform
           "
         >
@@ -44,7 +44,7 @@ const HeroSection = () => {
           With the Power of AI
         </GradientText>
         <br />
-        <p className="max-w-2xl mx-auto mb-8 text-xl text-gray-600">
+        <p className="max-w-2xl mx-auto mb-8 text-lg md:text-xl lg:text-lg text-gray-600">
           An AI-powered financial management platform that helps you track,
           analyze, and optimize your spending with real-time insights.
         </p>

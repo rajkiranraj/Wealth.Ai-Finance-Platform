@@ -142,6 +142,27 @@ Checklist before deploying:
 - Ensure your deployment uses a Node.js runtime for server actions that rely on `Buffer` (receipt scanning).
 - Configure Inngest (cloud) to call your deployed `/api/inngest` endpoint for cron + jobs.
 
+## Docker
+
+This repo includes a `Dockerfile` and `docker-compose.yaml`.
+
+Quick start:
+
+1. Create your env file:
+	```bash
+	cp .env.example .env
+	```
+2. Fill `.env` with real keys (Clerk, Gemini, DB, etc.).
+3. Build and run:
+	```bash
+	docker compose up --build
+	```
+
+Notes:
+
+- Don’t put secrets directly inside `docker-compose.yaml`.
+- The compose file includes an optional local Postgres service. If you use Supabase/Neon, set `DATABASE_URL`/`DIRECT_URL` in `.env` and you can remove the `db` service.
+
 ## Troubleshooting
 
 - **Signed out users seeing protected pages**: `(main)` routes are protected at the layout level and should redirect to `/sign-in`.

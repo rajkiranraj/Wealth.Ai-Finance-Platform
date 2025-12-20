@@ -35,10 +35,14 @@ const HeroSection = () => {
           animationSpeed={3}
           showBorder={false}
           className="
-            block text-center font-semibold tracking-tight
-            text-6xl sm:text-7xl md:text-8xl lg:text-8xl
-            leading-[1.08] will-change-transform overflow-visible
-          "
+    block text-center font-semibold tracking-tight
+    text-[clamp(2.25rem,6vw,5rem)]
+    leading-[1.1]
+    px-4 sm:px-6
+    max-w-[22ch] sm:max-w-[26ch] md:max-w-[32ch]
+    mx-auto
+    break-words
+  "
         >
           Where Intelligent Accounting
           <br className="hidden sm:block" />

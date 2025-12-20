@@ -5,6 +5,7 @@ import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import { checkUser } from "@/lib/checkUser";
 import Image from "next/image";
+import PlayToggle from "./ui/PlayToggle";
 
 const Header = async () => {
   await checkUser();
@@ -58,7 +59,7 @@ const Header = async () => {
           </SignedIn>
           <SignedOut>
             <SignInButton forceRedirectUrl="/">
-              <Button variant="outline">Login</Button>
+              <PlayToggle></PlayToggle>
             </SignInButton>
           </SignedOut>
           <SignedIn>

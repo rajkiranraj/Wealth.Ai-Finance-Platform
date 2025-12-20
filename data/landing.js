@@ -96,7 +96,7 @@ export const testimonialsData = [
     role: "Small Business Owner",
     image: "/Rudra-Raj-Kiran .jpg",
     quote:
-      "CharterIQ has transformed the way I manage my business finances. Its AI-driven insights helped me uncover cost-saving opportunities I had never identified before.",
+      "wealthIQ has transformed the way I manage my business finances. Its AI-driven insights helped me uncover cost-saving opportunities I had never identified before.",
   },
   {
     name: "Srivasthava varma",
@@ -110,6 +110,6 @@ export const testimonialsData = [
     role: "Financial Advisor",
     image: "/rishabh.jpg",
     quote:
-      "I recommend CharterIQ to my clients. The multi-currency support and detailed analytics make it an excellent platform for managing international investments.",
+      "I recommend welthIQ to my clients. The multi-currency support and detailed analytics make it an excellent platform for managing international investments.",
   },
 ];

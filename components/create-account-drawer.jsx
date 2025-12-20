@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Loader2 } from "lucide-react";
 import useFetch from "@/hooks/use-fetch";
 import { toast } from "sonner";
 
@@ -171,14 +170,7 @@ export function CreateAccountDrawer({ children }) {
                 className="flex-1"
                 disabled={createAccountLoading}
               >
-                {createAccountLoading ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Creating...
-                  </>
-                ) : (
-                  "Create Account"
-                )}
+                {createAccountLoading ? <>Creating...</> : "Create Account"}
               </Button>
             </div>
           </form>

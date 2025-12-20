@@ -37,11 +37,12 @@ const HeroSection = () => {
           className="
             block text-center font-semibold tracking-tight
             text-6xl sm:text-7xl md:text-8xl lg:text-8xl
-            leading-[1.02] will-change-transform
+            leading-[1.08] will-change-transform overflow-visible
           "
         >
-          Manage Your Finances <br className="hidden sm:block" />
-          With the Power of AI
+          Where Intelligent Accounting
+          <br className="hidden sm:block" />
+          Meets Financial Clarity
         </GradientText>
         <br />
         <p className="max-w-2xl mx-auto mb-8 text-lg md:text-xl lg:text-lg text-gray-600">

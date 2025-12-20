@@ -52,7 +52,6 @@ import { cn, formatCurrencyINR } from "@/lib/utils";
 import { categoryColors } from "@/data/categories";
 import { bulkDeleteTransactions } from "@/actions/account";
 import useFetch from "@/hooks/use-fetch";
-import { BarLoader } from "react-spinners";
 import { useRouter } from "next/navigation";
 
 const ITEMS_PER_PAGE = 10;
@@ -198,9 +197,6 @@ export function TransactionTable({ transactions }) {
 
   return (
     <div className="space-y-4">
-      {deleteLoading && (
-        <BarLoader className="mt-4" width={"100%"} color="#9333ea" />
-      )}
       {/* Filters */}
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="relative flex-1">

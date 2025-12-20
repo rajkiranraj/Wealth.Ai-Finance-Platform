@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import { Camera, Loader2 } from "lucide-react";
+import { Camera } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import useFetch from "@/hooks/use-fetch";
@@ -63,7 +63,6 @@ export function ReceiptScanner({ onScanComplete }) {
       >
         {scanReceiptLoading ? (
           <>
-            <Loader2 className="mr-2 animate-spin" />
             <span>Scanning Receipt...</span>
           </>
         ) : (

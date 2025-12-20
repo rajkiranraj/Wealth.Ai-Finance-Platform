@@ -3,7 +3,7 @@
 import { useCallback, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CalendarIcon, Loader2 } from "lucide-react";
+import { CalendarIcon } from "lucide-react";
 import { format } from "date-fns";
 import { useRouter, useSearchParams } from "next/navigation";
 import useFetch from "@/hooks/use-fetch";
@@ -324,10 +324,7 @@ export function AddTransactionForm({
         </Button>
         <Button type="submit" className="w-full" disabled={transactionLoading}>
           {transactionLoading ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              {editMode ? "Updating..." : "Creating..."}
-            </>
+            <>{editMode ? "Updating..." : "Creating..."}</>
           ) : editMode ? (
             "Update Transaction"
           ) : (

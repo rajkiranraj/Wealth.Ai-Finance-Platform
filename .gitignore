@@ -41,3 +41,6 @@ yarn-error.log*
 next-env.d.ts
 .env
 /lib/generated/prisma
+
+# docs (local presentation notes)
+PRESENTATION_GUIDE.md

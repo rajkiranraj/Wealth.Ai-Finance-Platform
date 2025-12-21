@@ -1,13 +1,18 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import Image from "next/image";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import GradientText from "@/components/ui/GradientText";
+import Mutebutton from "@/components/ui/Mutebutton";
 
 const HeroSection = () => {
   const imageRef = useRef(null);
+  const videoRef = useRef(null);
+  const [muted, setMuted] = useState(true);
+
+  const videoSrc = useMemo(() => "/herovideo.mp4", []);
+  const posterSrc = useMemo(() => "/banner.png", []);
 
   useEffect(() => {
     const imageElement = imageRef.current;
@@ -68,16 +73,36 @@ const HeroSection = () => {
         <div className="mt-5 hero-image-wrapper md:mt-0">
           <div
             ref={imageRef}
-            className="mx-auto overflow-hidden border shadow-2xl rounded-3xl hero-image"
+            className="relative mx-auto overflow-hidden border shadow-2xl rounded-3xl hero-image"
           >
-            <Image
-              src="/banner.png"
-              width={1280}
-              height={720}
-              alt="Dashboard Preview"
-              priority
-              className="w-full h-auto rounded-3xl"
-            />
+            <div className="w-full" style={{ aspectRatio: "16 / 9" }}>
+              <video
+                ref={videoRef}
+                className="w-full h-full rounded-3xl object-cover"
+                autoPlay
+                loop
+                playsInline
+                muted={muted}
+                preload="metadata"
+                poster={posterSrc}
+              >
+                <source src={videoSrc} type="video/mp4" />
+              </video>
+            </div>
+
+            <div className="absolute top-6 right-8 z-10">
+              <Mutebutton
+                className="text-primary-foreground bg-primary/90 border border-primary/30 rounded-full h-10 w-10 shadow-lg ring-1 ring-primary-foreground/20 backdrop-blur"
+                checked={!muted}
+                aria-label={muted ? "Unmute video" : "Mute video"}
+                onChange={(e) => {
+                  const shouldBeUnmuted = e.target.checked;
+                  const nextMuted = !shouldBeUnmuted;
+                  setMuted(nextMuted);
+                  if (videoRef.current) videoRef.current.muted = nextMuted;
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>

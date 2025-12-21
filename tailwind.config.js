@@ -65,6 +65,9 @@ module.exports = {
       animation: {
         gradient: "gradient 8s linear infinite",
       },
+      transitionTimingFunction: {
+        elastic: "cubic-bezier(0.25, 1.5, 0.5, 1.5)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

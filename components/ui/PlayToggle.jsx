@@ -22,7 +22,7 @@ export default function PlayToggle({ className, ...props }) {
                    pl-4 pr-[60px] rounded-[16px]
                    bg-black
                    shadow-[1px_1px_2px_-1px_#fff_inset,0_2px_1px_#00000010,0_4px_2px_#00000010,0_8px_4px_#00000010,0_16px_8px_#00000010]
-                   transition-all duration-150 ease-[cubic-bezier(0.25,1.5,0.5,1.5)]
+                   transition-all duration-150 ease-elastic
                    peer-hover:-translate-y-0.5 peer-active:translate-y-0.5"
       >
         {/* Button Text */}

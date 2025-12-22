@@ -12,7 +12,6 @@ const HeroSection = () => {
   const [muted, setMuted] = useState(true);
 
   const videoSrc = useMemo(() => "/herovideo.mp4", []);
-  const posterSrc = useMemo(() => "/banner.png", []);
 
   useEffect(() => {
     const imageElement = imageRef.current;
@@ -83,8 +82,7 @@ const HeroSection = () => {
                 loop
                 playsInline
                 muted={muted}
-                preload="metadata"
-                poster={posterSrc}
+                preload="auto"
               >
                 <source src={videoSrc} type="video/mp4" />
               </video>
@@ -99,7 +97,10 @@ const HeroSection = () => {
                   const shouldBeUnmuted = e.target.checked;
                   const nextMuted = !shouldBeUnmuted;
                   setMuted(nextMuted);
-                  if (videoRef.current) videoRef.current.muted = nextMuted;
+                  if (videoRef.current) {
+                    videoRef.current.muted = nextMuted;
+                    videoRef.current.play?.().catch(() => {});
+                  }
                 }}
               />
             </div>

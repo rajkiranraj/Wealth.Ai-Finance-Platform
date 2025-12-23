@@ -113,12 +113,12 @@ const LandingPage = () => {
             Join thousands of users who are already managing their finances
             smarter with Welth
           </p>
-          <Link href="/dashboard">
+          <Link href="/plans">
             <Button
               size="lg"
               className="text-blue-600 bg-white hover:bg-blue-50 animate-bounce"
             >
-              Start Free Trial
+              View Plans
             </Button>
           </Link>
         </div>

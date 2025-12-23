@@ -63,7 +63,7 @@ const HeroSection = () => {
               Get Started
             </Button>
           </Link>
-          <Link href="#">
+          <Link href="https://www.linkedin.com/posts/rajkiranraj_softwareengineering-fullstackdeveloper-sde-activity-7408481523039031296-qdNU?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEUSf3oBKLohrSLmEkZ6QecUV3DTeFebtVM">
             <Button size="lg" variant="outline" className="px-8">
               Watch Demo
             </Button>

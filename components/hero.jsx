@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import GradientText from "@/components/ui/GradientText";
 import Mutebutton from "@/components/ui/Mutebutton";
+import PlayPauseButton from "@/components/PlayPauseButton";
 
 const HeroSection = () => {
   const imageRef = useRef(null);
+  const videoContainerRef = useRef(null);
   const videoRef = useRef(null);
   const [muted, setMuted] = useState(true);
 
@@ -74,11 +76,21 @@ const HeroSection = () => {
             ref={imageRef}
             className="relative mx-auto overflow-hidden border shadow-2xl rounded-3xl hero-image"
           >
-            <div className="w-full" style={{ aspectRatio: "16 / 9" }}>
+            <div
+              ref={videoContainerRef}
+              className="relative w-full home-video-target"
+              style={{ aspectRatio: "16 / 9" }}
+              tabIndex={0}
+              onMouseEnter={() => {
+                videoRef.current?.play?.().catch(() => {});
+              }}
+              onFocus={() => {
+                videoRef.current?.play?.().catch(() => {});
+              }}
+            >
               <video
                 ref={videoRef}
                 className="w-full h-full rounded-3xl object-cover"
-                autoPlay
                 loop
                 playsInline
                 muted={muted}
@@ -86,6 +98,11 @@ const HeroSection = () => {
               >
                 <source src={videoSrc} type="video/mp4" />
               </video>
+
+              <PlayPauseButton
+                videoRef={videoRef}
+                containerRef={videoContainerRef}
+              />
             </div>
 
             <div className="absolute top-6 right-8 z-10">

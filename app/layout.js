@@ -10,9 +10,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Welth",
   description: "One stop Finance Platform",
-  verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
-  },
 };
 
 export default function RootLayout({ children }) {

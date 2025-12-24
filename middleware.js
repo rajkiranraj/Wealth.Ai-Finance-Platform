@@ -4,9 +4,6 @@ import arcjet, {
   createMiddleware as createArcjetMiddleware,
 } from "@arcjet/next";
 import { clerkMiddleware } from "@clerk/nextjs/server";
-
-/* global process */
-
 // Clerk setup
 const clerk = clerkMiddleware({
   publicRoutes: ["/", "/plans", "/sign-in(.*)", "/sign-up(.*)"],

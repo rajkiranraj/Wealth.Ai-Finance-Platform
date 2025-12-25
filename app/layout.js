@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "react-loading-skeleton/dist/skeleton.css";
 import Header from "@/components/header";
 import SplashCursor from "@/components/SplashCursor";
 import { ClerkProvider } from "@clerk/nextjs";

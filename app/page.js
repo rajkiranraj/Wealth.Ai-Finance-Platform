@@ -9,7 +9,7 @@ import {
 } from "@/data/landing";
 import HeroSection from "@/components/hero";
 import Link from "next/link";
-
+//Landing page
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-white">
